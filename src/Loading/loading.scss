@@ -1,0 +1,103 @@
+.componment-loading-wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.componment-loading-main {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  .componment-loading-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .componment-loading-circle1 {
+      top: 0; 
+      left: 0;
+    }
+    .componment-loading-circle2 {
+      top: 0; 
+      right: 0;
+    }
+    .componment-loading-circle3 {
+      right: 0; 
+      bottom: 0;
+    } 
+    .componment-loading-circle4 {
+      left: 0; 
+      bottom: 0;
+    }
+  }
+  .componment-loading-container2 {
+    transform: rotateZ(45deg);
+    .componment-loading-circle1 {
+      animation-delay: -1.1s;
+    }
+    .componment-loading-circle2 {
+      animation-delay: -0.8s;
+    }
+    .componment-loading-circle3 {
+      animation-delay: -0.5s;
+    }
+    .componment-loading-circle4 {
+      animation-delay: -0.2s;
+    }
+  }
+  .componment-loading-container3 {
+    transform: rotateZ(90deg);
+    .componment-loading-circle1 {
+      animation-delay: -1.0s;
+    }
+    .componment-loading-circle2 {
+      animation-delay: -0.7s;
+    }
+    .componment-loading-circle3 {
+      animation-delay: -0.4s;
+    }
+    .componment-loading-circle4 {
+      animation-delay: -0.1s;
+    }
+  }
+  .componment-loading-container1 {
+    transform: rotateZ(90deg);
+    .componment-loading-circle2 {
+      animation-delay: -0.9s;
+    }
+    .componment-loading-circle3 {
+      animation-delay: -0.6s;
+    }
+    .componment-loading-circle4 {
+      animation-delay: -0.3s;
+    }
+  }
+}
+ 
+.componment-loading-container > div {
+  width: 13px;
+  height: 13px;
+  background-color: #1890ff;
+  border-radius: 100%;
+  position: absolute;
+  animation: bouncedelay 1.2s infinite ease-in-out;
+  animation-fill-mode: both;
+}
+ 
+ 
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+ 
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+  }
+}

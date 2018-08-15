@@ -1,0 +1,101 @@
+.pagination-wrap {
+	user-select: none;
+  padding: 100px 200px;
+  color: #777;
+  .pagination-text {
+    float: left;
+    line-height: 32px;
+    margin-right: 15px;
+  }
+	.pagination-pages {
+		ul {
+			list-style: none;
+			li {
+				margin-left: -1px;
+				display: inline-block;
+				border: 1px solid #ddd;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+        cursor: pointer;
+        margin-right: 5px;
+        background-color: #fff;
+				&:first-child {
+					border-top-left-radius: 4px;
+					border-bottom-left-radius: 4px;
+				}
+				&:last-child {
+					border-top-right-radius: 4px;
+    				border-bottom-right-radius: 4px;
+				}
+				&:hover {
+					color: #fff;
+          border-color: #ddd;
+          background-color: #4580E6;
+				}
+				&.pagination-current, &.pagination-dot {
+					cursor: default;
+				}
+				&.pagination-dot {
+					&:hover {
+            background-color: #fff;
+            color: #777;
+					}
+        }
+        .pagination-prevPage,.pagination-nextPage {
+          &:hover {
+            background-color: #fff;
+            color: #777;
+          }
+        }
+			}
+		}
+		.pagination-current {
+			color: #fff;
+			border-color: #ddd;
+			background-color: #4580E6;
+		}
+	}
+
+	.pagination-pages, .pagination-go, .paginatioin-btn, .pagination-go-wrap {
+		display: inline-block;
+	}
+	.pagination-go {
+		margin-left: 20px;
+		input {
+			width: 36px;
+			height: 34px;
+			border: 1px solid #aaa;
+			padding: 0;
+			text-align: center;
+			border-radius: 4px;
+		}
+	}
+	.paginatioin-btn {
+		margin-left: 20px;
+		button {
+			padding: 0;
+			width: 50px;
+			height: 34px;
+			outline: none;
+			cursor: pointer;
+			line-height: 34px;
+			border-radius: 4px;
+			display: inline-block;
+			border: 1px solid #aaa;
+			background-color: transparent;
+			&:hover {
+				background-color: #eee;
+			}
+		}
+	}
+	.pagination-disabled {
+    color: #ccc;
+    cursor: not-allowed !important;
+		&:hover {
+      color: #ccc !important;
+      background-color: #fff !important;
+		}
+	}
+}
