@@ -47,9 +47,9 @@ export default class App extends Component {
       <div>
         {/* <Page pageSize={20} total={487}/> */}
         <Pagination
-					total={346}
+					total={846}
 					pageSize={20}
-					defaultPage={1}
+					defaultNum={1}
           onChange={this.handleChange}
 				/>
         {/* <Loading /> */}
